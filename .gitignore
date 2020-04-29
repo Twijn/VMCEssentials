@@ -1,0 +1,6 @@
+bin/
+src/net/valoranmc/essentials/utils/DBUtils.java
+.settings/
+.classpath
+.gitattributes
+.project

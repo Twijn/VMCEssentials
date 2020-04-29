@@ -1,0 +1,27 @@
+name: VMCEssentials
+version: 1.0.0
+api-version: 1.15
+author: Twijn
+main: net.valoranmc.essentials.VMCEssentials
+
+commands:
+  fly:
+    permission: vmce.fly
+    usage: /<command>
+  nick:
+    permission: vmce.nick
+    usage: /<command>
+
+permissions:
+  vmce.fly:
+    default: op
+    description: Permission to use /fly
+  vmce.fly.others:
+    default: op
+    description: Permission to use /fly on others
+  vmce.nick:
+    default: op
+    description: Permission to use /nick
+  vmce.nick.others:
+    default: op
+    description: Permission to use /nick on others
