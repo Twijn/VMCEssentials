@@ -10,7 +10,25 @@ commands:
     usage: /<command>
   nick:
     permission: vmce.nick
-    usage: /<command>
+    usage: /<command> [Player] <Nickname>
+  tpo:
+    permission: vmce.tpo
+    usage: /<command> <Player>
+  tpohere:
+    permission: vmce.tpohere
+    usage: /<command> <Player>
+  tpa:
+    default: vmce.tpa
+    usage: /<command> <Player>
+  tpahere:
+    default: vmce.tpahere
+    usage: /<command> <Player>
+  tpaccept:
+    default: vmce.tpaccept
+    usage: /<command> <Player>
+  tpdeny:
+    default: vmce.tpdeny
+    usage: /<command> <Player>
 
 permissions:
   vmce.fly:
@@ -25,3 +43,21 @@ permissions:
   vmce.nick.others:
     default: op
     description: Permission to use /nick on others
+  vmce.tpo:
+    default: op
+    description: Permission to use /tpo
+  vmce.tpohere:
+    default: op
+    description: Permission to use /tpohere
+  vmce.tpa:
+    default: true
+    description: Permission to use /tpa
+  vmce.tpahere:
+    default: true
+    description: Permission to use /tpahere
+  vmce.tpaccept:
+    default: true
+    description: Permission to use /tpaccept
+  vmce.tpdeny:
+    default: true
+    description: Permission to use /tpdeny
