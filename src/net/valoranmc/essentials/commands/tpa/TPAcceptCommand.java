@@ -86,8 +86,8 @@ public class TPAcceptCommand implements CommandExecutor {
 					@Override
 					public void run() {
 						fulfillFinal.getFrom().teleport(fulfillFinal.getTo());
-						fulfillFinal.getFrom().sendMessage("§6§oTeleporting...");
-						fulfillFinal.getTo().sendMessage("§6§oTeleporting §e§o" + fulfillFinal.getFrom().getName() + "§6§o...");
+						fulfillFinal.getFrom().sendMessage("§6Teleporting...");
+						fulfillFinal.getTo().sendMessage("§6Teleporting §e" + fulfillFinal.getFrom().getName() + "§6...");
 						
 						TPACommand.teleportPending.remove(fulfillFinal);
 					}
