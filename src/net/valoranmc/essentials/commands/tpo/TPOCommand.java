@@ -17,7 +17,7 @@ public class TPOCommand implements CommandExecutor {
 				Player target = Bukkit.getPlayer(args[0]);
 				
 				if (target != null) {
-					player.sendMessage("§9§oTeleporting to §9" + target.getDisplayName());
+					player.sendMessage("§7§oTeleporting to §9" + target.getDisplayName());
 					player.teleport(target);
 				} else {
 					sender.sendMessage("§c§oPlayer §c" + args[0] + "§c§l is not online!");

@@ -17,7 +17,7 @@ public class TPOHereCommand implements CommandExecutor {
 				Player target = Bukkit.getPlayer(args[0]);
 				
 				if (target != null) {
-					player.sendMessage("§9§oTeleporting §9" + target.getDisplayName() + "§9§o to you");
+					player.sendMessage("§7§oTeleporting §9" + target.getDisplayName() + "§9§o to you");
 					target.teleport(player);
 				} else {
 					sender.sendMessage("§c§oPlayer §c" + args[0] + "§c§o is not online!");
