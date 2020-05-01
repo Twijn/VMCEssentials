@@ -35,6 +35,10 @@ public class NickCommand implements CommandExecutor {
 					updateUuid.setString(4, nickname);
 					updateUuid.setString(5, uuid);
 					updateUuid.execute();
+					
+					player.setDisplayName(nickname);
+					
+					player.sendMessage("§7§oYour nickname was set to §7" + nickname + "§7§o!");
 				} catch (SQLException e) {
 					e.printStackTrace();
 				} finally {
@@ -64,6 +68,8 @@ public class NickCommand implements CommandExecutor {
 						Player player = Bukkit.getPlayer(args[0]);
 						uuid = player.getUniqueId().toString();
 						player.setDisplayName(args[0]);
+						
+						player.sendMessage("§7§oYour nickname was set to §7" + nickname + "§7§o!");
 					}
 					
 					if (sender instanceof Player) {
@@ -87,6 +93,9 @@ public class NickCommand implements CommandExecutor {
 					updateUuid.setString(4, nickname);
 					updateUuid.setString(5, setUuid);
 					updateUuid.execute();
+
+					
+					sender.sendMessage("§7§oSet " + args[0] + "'s nickname to §7" + nickname + "§7§o!");
 				} catch (SQLException e) {
 					e.printStackTrace();
 				} finally {

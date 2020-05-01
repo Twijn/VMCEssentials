@@ -13,9 +13,9 @@ public class FlyCommand implements CommandExecutor {
 			Player player = (Player) sender;
 			
 			if (player.getAllowFlight()) {
-				player.sendMessage("§c§oYou are no longer flying!");
+				player.sendMessage("§7§oYou are no longer flying!");
 			} else {
-				player.sendMessage("§9§oYou are now flying!");
+				player.sendMessage("§7§oYou are now flying!");
 			}
 			
 			player.setAllowFlight(!player.getAllowFlight());
