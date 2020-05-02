@@ -44,6 +44,12 @@ commands:
   gmsp:
     permission: vmce.gamemode.spectator
     usage: /<command>
+  feed:
+    permission: vmce.feed
+    usage: /<command> [Player]
+  heal:
+    permission: vmce.heal
+    usage: /<command> [Player]
 
 permissions:
   vmce.fly:
@@ -110,3 +116,15 @@ permissions:
     default: op
     children:
       vmce.gamemode.command: true
+  vmce.feed:
+    description: Permission to /feed
+    default: op
+  vmce.feed.others:
+    description: Permission to /feed others
+    default: op
+  vmce.heal:
+    description: Permission to /heal
+    default: op
+  vmce.heal.others:
+    description: Permission to /heal others
+    default: op

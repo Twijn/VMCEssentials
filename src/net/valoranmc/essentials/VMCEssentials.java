@@ -7,7 +7,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import net.valoranmc.essentials.commands.FeedCommand;
 import net.valoranmc.essentials.commands.FlyCommand;
+import net.valoranmc.essentials.commands.HealCommand;
 import net.valoranmc.essentials.commands.NickCommand;
 import net.valoranmc.essentials.commands.gamemode.GMACommand;
 import net.valoranmc.essentials.commands.gamemode.GMCCommand;
@@ -38,6 +40,9 @@ public class VMCEssentials extends JavaPlugin {
 		
 		getCommand("fly").setExecutor(new FlyCommand());
 		getCommand("nick").setExecutor(new NickCommand());
+		
+		getCommand("heal").setExecutor(new HealCommand());
+		getCommand("feed").setExecutor(new FeedCommand());
 		
 		getCommand("tpo").setExecutor(new TPOCommand());
 		getCommand("tpohere").setExecutor(new TPOHereCommand());
