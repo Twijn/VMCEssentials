@@ -28,7 +28,22 @@ commands:
     usage: /<command> <Player>
   tpdeny:
     default: vmce.tpdeny
-    usage: /<command> <Player>
+    usage: /<command>
+  gamemode:
+    permission: vmce.gamemode.command
+    usage: /<command> [Player] <Gamemode>
+  gma:
+    permission: vmce.gamemode.adventure
+    usage: /<command>
+  gmc:
+    permission: vmce.gamemode.creative
+    usage: /<command>
+  gms:
+    permission: vmce.gamemode.survival
+    usage: /<command>
+  gmsp:
+    permission: vmce.gamemode.spectator
+    usage: /<command>
 
 permissions:
   vmce.fly:
@@ -61,3 +76,37 @@ permissions:
   vmce.tpdeny:
     default: true
     description: Permission to use /tpdeny
+  vmce.gamemode.*:
+    description: Gives permission to all Gamemode related commands
+    children:
+      vmce.gamemode.command: true
+      vmce.gamemode.adventure: true
+      vmce.gamemode.creative: true
+      vmce.gamemode.survival: true
+      vmce.gamemode.spectator: true
+  vmce.gamemode.command:
+    description: Permission to use /gamemode
+    default: op
+  vmce.gamemode.command.others:
+    description: Permission to use /gamemode on others
+    default: op
+  vmce.gamemode.adventure:
+    description: Gives permission to enter adventure mode
+    default: op
+    children:
+      vmce.gamemode.command: true
+  vmce.gamemode.creative:
+    description: Gives permission to enter creative mode
+    default: op
+    children:
+      vmce.gamemode.command: true
+  vmce.gamemode.survival:
+    description: Gives permission to enter survival mode
+    default: op
+    children:
+      vmce.gamemode.command: true
+  vmce.gamemode.spectator:
+    description: Gives permission to enter spectator mode
+    default: op
+    children:
+      vmce.gamemode.command: true
